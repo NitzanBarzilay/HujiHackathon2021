@@ -1,0 +1,41 @@
+----------User-----------
+name
+email
+type = a/b/c   # admin / business / customer
+
+vegan_friendly = y/n
+second_hand = y/n
+kosher = y/n
+eco_friendly = y/n
+social_business = y/n
+made_in_israel = y/n
+
+----------Store-----------
+store_name
+email
+description
+city = from drop down list
+
+fashion = y/n
+food = y/n
+office = y/n
+cosmetics = y/n
+books = y/n
+gardening = y/n
+electronics = y/n
+pharma = y/n
+sports = y/n
+
+vegan_friendly = y/n
+second_hand = y/n
+kosher = y/n
+eco_friendly = y/n
+social_business = y/n
+made_in_israel = y/n
+
+----------Product-----------
+name
+description
+price
+email
+recommended = y/n
