@@ -1,5 +1,44 @@
 :host {
     text-align: center;
     align-items: center;  
-    overflow-wrap:break-word
+    overflow-wrap:break-word;
+}
+
+body {
+    color: #4d4d4d;
+    background-color: #f5f5f5;
+  }
+
+#titleDiv {
+    background-color: #b9b9da;
+    height: 20%;
+}
+
+p {
+    color: #3F3F88;
+    float: right;
+    padding: 2%;
+    direction: rtl;
+}
+
+.logo {
+    height: 100px;
+}
+
+button {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin: 2%;
+    border: none;
+    background-color: #3F3F88;
+    border-radius: 50%;
+}
+
+.search {
+    height: 20px;
+}
+
+button:hover{
+    background-color: #29296d;
 }
