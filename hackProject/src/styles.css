@@ -3,3 +3,14 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
 
+button {
+    border: none;
+    background-color: #3F3F88;
+    color: white;
+    padding: 15px;
+}
+
+button:hover{
+    background-color: #29296d;
+}
+
