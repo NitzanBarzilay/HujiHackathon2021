@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class StoresService {
   stores: Store[] = [
-    {name:"aa",owner:"bb",city:"cc"},
-    {name:"bb",owner:"cc",city:"dd"},
-    {name:"zz",owner:"bb",city:"nn"},
+    this.createMockStore("name1", "food"),
+    this.createMockStore("name2", "food"),
+    this.createMockStore("name3", "food"), 
   ];
 
-  getStores() {
+  getStores() : Store[]{
     return this.stores;
   }
 
@@ -30,6 +30,50 @@ export class StoresService {
       'Pharma',
       'Sports'
     ];
+  }
+  getStoresByCatagory(category: string) : Store[]{
+    switch(category) {
+      case 'Fashion': {
+        return [
+          this.createMockStore("fashion1", "fashion"),
+          this.createMockStore("fashion2", "fashion"),
+          this.createMockStore("fashion3", "fashion"), 
+        ];
+      }
+      case 'Food': {
+        return [
+          this.createMockStore("food1", "food"),
+          this.createMockStore("food2", "food"),
+          this.createMockStore("food3", "food"), 
+        ];
+      }
+      case 'all': {
+        return [
+          this.createMockStore("food1", "food"),
+          this.createMockStore("fashion1", "fashion"),
+          this.createMockStore("food2", "food"), 
+        ];
+      }
+      default: {
+        return [];
+      }
+    }
+  }
+
+  createMockStore(inName: string, inCatagory: string) : Store {
+    return { name: inName,
+      ownerName: "owner1",
+      ownerEmail: "mail",
+      city: "city",
+      description: "desc",
+      category: inCatagory,
+      veganFriendly: true,
+      secondHand: false,
+      kosher: false,
+      ecoFriendly: true,
+      socialBusiness: false,
+      madeInIsrael: false,
+    }
   }
   constructor() { }  
 }

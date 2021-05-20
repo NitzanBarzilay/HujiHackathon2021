@@ -2,18 +2,61 @@
 <form [formGroup]="registrationForm">
     <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Store Name" formControlName="storeName" required>
+        <input matInput placeholder="Store Name" formControlName="name" required>
     </mat-form-field>
     <br/>
     <mat-form-field appearance="fill">
         <mat-label>Owner</mat-label>
-        <input matInput placeholder="Store Owner" formControlName="storeOwner" required>
+        <input matInput placeholder="Store Owner" formControlName="ownerName" required>
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="fill">
+        <mat-label>Owner Email</mat-label>
+        <input matInput placeholder="Owner Email" formControlName="ownerEmail" required>
     </mat-form-field>
     <br/>
     <mat-form-field appearance="fill">
         <mat-label>City</mat-label>
         <input matInput placeholder="City" formControlName="city" required>
     </mat-form-field>
+    <br/>
+    <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <input matInput placeholder="description" formControlName="description" required>
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category">
+            <mat-option *ngFor="let categorySelect of categories">
+                {{categorySelect}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br/>
+    <mat-checkbox formControlName="veganFriendly">
+        veganFriendly
+    </mat-checkbox>
+    &nbsp;    
+    <mat-checkbox formControlName="secondHand">
+        secondHand
+    </mat-checkbox>
+    &nbsp;
+    <mat-checkbox formControlName="kosher">
+        kosher
+    </mat-checkbox>
+    &nbsp;
+    <mat-checkbox formControlName="ecoFriendly">
+        ecoFriendly
+    </mat-checkbox>
+    &nbsp;
+    <mat-checkbox formControlName="socialBusiness">
+        socialBusiness
+    </mat-checkbox>
+    &nbsp;
+    <mat-checkbox formControlName="madeInIsrael">
+        madeInIsrael
+    </mat-checkbox>
     <br/>
     <button mat-button [disabled]="registrationForm.invalid" (click)="submitStoreInfo()">Submit</button>
 </form>
