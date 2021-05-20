@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StoresService} from '../stores.service';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  categories: string[];
 
-  constructor() { }
+  constructor(private stores: StoresService) {
+    this.categories = stores.getCatagories();
+  }
 
   ngOnInit(): void {
   }

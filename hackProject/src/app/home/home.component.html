@@ -1,13 +1,9 @@
-<mat-card id="card" style="text-align: center;">
-    <button mat-raised-button color="primary">
-      Start Shopping
-    </button>
-    <br/>
-    <br/>
-    <a routerLink="/register" routerLinkActive="active">
-      <button mat-raised-button color="primary">
-        Register a business
-      </button>
-    </a>
-</mat-card>
-  
+<mat-grid-list cols="3" >
+  <mat-grid-tile *ngFor="let category of categories">
+      <mat-card>
+          <mat-card-content>
+              {{category}}
+          </mat-card-content>
+      </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

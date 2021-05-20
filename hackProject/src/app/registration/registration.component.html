@@ -1,10 +1,19 @@
-<!-- <div id="main-form" formGroupName="registrationForm">
-    <label for="name">Name</label>
-    <input type="text" name="name" formControlName="name">
-    <label for="owner">Owner</label>
-    <input type="text" name="owner" formControlName="owner">
-    <label for="name">City</label>
-    <input type="text" name="city" formControlName="city">
-</div>
-   -->
-<p>Welcome to the registration form!</p>
+<h3>Please supply some information about your store:</h3>
+<form [formGroup]="registrationForm">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Store Name" formControlName="storeName" required>
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="fill">
+        <mat-label>Owner</mat-label>
+        <input matInput placeholder="Store Owner" formControlName="storeOwner" required>
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="fill">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="City" formControlName="city" required>
+    </mat-form-field>
+    <br/>
+    <button mat-button [disabled]="registrationForm.invalid" (click)="submitStoreInfo()">Submit</button>
+</form>
