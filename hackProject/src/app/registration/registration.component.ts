@@ -9,20 +9,40 @@ import {StoresService} from '../stores.service';
 })
 export class RegistrationComponent {
   registrationForm: FormGroup
+  categories: string[];
 
   constructor(private fb: FormBuilder, private stores: StoresService) {
+    this.categories = stores.getCatagories();
     this.registrationForm = this.fb.group({
-      storeName: [''],
-      storeOwner: [''],
+      name: [''],
+      ownerName: [''],
+      ownerEmail: [''],
       city: [''],
+      description: [''],
+      category: [''],
+      veganFriendly: [false],
+      secondHand: [false],
+      kosher: [false],
+      ecoFriendly: [false],
+      socialBusiness: [false],
+      madeInIsrael: [false],
     });
   }
 
   submitStoreInfo() {
     let newStore: Store = {
-      name: this.registrationForm.value.storeName, 
-      owner: this.registrationForm.value.storeOwner, 
-      city: this.registrationForm.value.city 
+      name: this.registrationForm.value.name,
+      ownerName: this.registrationForm.value.ownerName,
+      ownerEmail: this.registrationForm.value.ownerEmail,
+      city: this.registrationForm.value.city,
+      description: this.registrationForm.value.description,
+      category: this.registrationForm.value.category,
+      veganFriendly: this.registrationForm.value.veganFriendly,
+      secondHand: this.registrationForm.value.secondHand,
+      kosher: this.registrationForm.value.kosher,
+      ecoFriendly: this.registrationForm.value.ecoFriendly,
+      socialBusiness: this.registrationForm.value.socialBusiness,
+      madeInIsrael: this.registrationForm.value.madeInIsrael,
     };
     this.stores.addStore(newStore);
   }

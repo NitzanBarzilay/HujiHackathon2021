@@ -6,21 +6,23 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeComponent} from './home/home.component';
-import {DisplayComponent} from './display/display.component';
 import { CommonModule } from '@angular/common';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     HomeComponent,
-    DisplayComponent,
+    CategoryComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -32,6 +34,8 @@ import { CommonModule } from '@angular/common';
     MatFormFieldModule,
     MatInputModule,
     MatGridListModule,
+    MatCheckboxModule,
+    MatSelectModule,
     ReactiveFormsModule,
   ],
   providers: [],
@@ -42,7 +46,16 @@ export class AppModule {}
 declare global{
   export interface Store {
     name: string;
-    owner: string;
-    city: string
+    ownerName: string;
+    ownerEmail: string;
+    city: string;
+    description: string;
+    category: string;
+    veganFriendly: boolean;
+    secondHand: boolean;
+    kosher: boolean;
+    ecoFriendly: boolean;
+    socialBusiness: boolean;
+    madeInIsrael: boolean;
   }
 }
