@@ -2,7 +2,7 @@
 name
 email
 type = a/b/c   # admin / business / customer
-
+category = fashion / food / office / cosmetics / books / gardening / electronics / pharma / sports
 vegan_friendly = y/n
 second_hand = y/n
 kosher = y/n
@@ -15,16 +15,7 @@ store_name
 email
 description
 city = from drop down list
-
-fashion = y/n
-food = y/n
-office = y/n
-cosmetics = y/n
-books = y/n
-gardening = y/n
-electronics = y/n
-pharma = y/n
-sports = y/n
+category = fashion / food / office / cosmetics / books / gardening / electronics / pharma / sports
 
 vegan_friendly = y/n
 second_hand = y/n
