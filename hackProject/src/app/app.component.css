@@ -5,7 +5,7 @@
 }
 
 #titleDiv {
-    background-color: #ffd6d6;
+    background-color: #d5e2e7;
     height: 20%;
 }
 
@@ -40,7 +40,6 @@ p {
 .register_button {
     float: right;
     margin: 1%;
-    border-radius: 5%;
     font-family: "Heb";
 }
 
