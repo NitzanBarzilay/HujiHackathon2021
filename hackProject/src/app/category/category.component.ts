@@ -9,11 +9,12 @@ import { StoresService } from '../stores.service';
 })
 export class CategoryComponent implements OnInit {
   storeList: Store[] = [];
+  hebCategory: string;
 
   constructor(private stores: StoresService,   
     private route: ActivatedRoute) {
-    let category: string = this.route.snapshot.paramMap.get('category') || 'all';
-    let engCategory = stores.turnHebCategoryToEng(category);
+    this.hebCategory = this.route.snapshot.paramMap.get('category') || 'all';
+    const engCategory = stores.turnHebCategoryToEng(this.hebCategory);
     stores.getStoresByCategory(engCategory).subscribe((data: Store[]) => {
       this.storeList = data;
     });

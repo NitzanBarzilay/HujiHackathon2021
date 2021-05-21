@@ -2,13 +2,13 @@
     background-color: #d5e2e7;
     border-color: #29296d;
     border-radius: 5%;
-    border-width: medium;
     color: #29296d;
-    display: inline-block;
+    display: inline-table;
     margin: 1%;
-    height: 300px;
+    height: 400px;
     width: 300px;
     font-family: "Heb";
+    text-decoration: none;
 }
 
 .store:hover {
@@ -29,8 +29,17 @@
 p{
     margin: 5%;
     font-size: 12pt;
+    height: 45%;
 }
 
 .getInStore {
-    margin: 15%;
+    margin: 2%;
+}
+
+h2{
+    font-size: 20pt;
+    font-family: Heb;
+    font-weight: bold;
+    color: #131352;
+    margin-left: 5%;
 }

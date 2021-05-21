@@ -35,12 +35,13 @@
         </mat-select>
     </mat-form-field>
     <br/>
-    <p>מוזמנים להוסיף לינק לתמונה שמייצגת אתכם או את העסק</p>
+    <p>מוזמנים להוסיף לינק לתמונה שמייצגת אתכם או את העסק:</p>
     <mat-form-field appearance="fill">
         <mat-label class="label">לינק לתמונה</mat-label>
-        <input matInput placeholder="imageUrl" formControlName="imageUrl" required>
+        <input matInput placeholder="imageUrl" formControlName="imageUrl">
     </mat-form-field>
     <br/>
+    <p>מוזמנים לסמן את מה שחשוב לכם בעסק:</p>
     <mat-checkbox formControlName="veganFriendly">
         veganFriendly
     </mat-checkbox>
@@ -66,6 +67,6 @@
     </mat-checkbox>
     <br/>
     <br/>
-    <button mat-button [disabled]="registrationForm.invalid" (click)="submitStoreInfo()" class="heb">שלח</button>
+    <button [disabled]="registrationForm.invalid" (click)="submitStoreInfo()" class="heb">שלח</button>
 </form>
 <br/>

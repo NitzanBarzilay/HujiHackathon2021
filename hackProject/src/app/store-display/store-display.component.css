@@ -1,0 +1,30 @@
+
+.nameStore {
+    font-weight: bold;
+    font-size: 20pt;
+
+}
+
+p{
+    margin: 1%;
+    font-size: 12pt;
+}
+
+.myStore {
+    float: right;
+    height: 100%;
+}
+
+.myStoreDescription {
+    text-align: right;
+    width: 20%;
+    float: right;
+    height: 100%;
+    margin-right: 15%;
+}
+
+.shopImg {
+    float: left;
+    margin-left: 15%;
+    margin-top: 2%;
+}

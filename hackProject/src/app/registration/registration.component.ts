@@ -34,7 +34,7 @@ export class RegistrationComponent {
   submitStoreInfo() {
     let engCategory = this.stores.turnHebCategoryToEng(this.registrationForm.value.category);
     let newStore: Store = {
-      store_name: this.registrationForm.value.name,
+      name: this.registrationForm.value.name,
       email: this.registrationForm.value.ownerEmail,
       city: this.registrationForm.value.city,
       description: this.registrationForm.value.description,

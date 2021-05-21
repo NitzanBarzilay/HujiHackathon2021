@@ -9,6 +9,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import {HttpClientModule} from '@angular/common/http';
+import {MatTreeModule} from '@angular/material/tree';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -39,6 +40,7 @@ import { StoreDisplayComponent } from './store-display/store-display.component';
     MatGridListModule,
     MatCheckboxModule,
     MatSelectModule,
+    MatTreeModule,
     ReactiveFormsModule,
     HttpClientModule,
   ],
@@ -49,7 +51,7 @@ export class AppModule {}
 
 declare global{
   export interface Store {
-    store_name: string;
+    name: string;
     email: string;
     description: string;
     city: string;

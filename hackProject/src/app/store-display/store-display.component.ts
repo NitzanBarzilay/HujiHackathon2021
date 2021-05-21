@@ -12,9 +12,11 @@ export class StoreDisplayComponent implements OnInit {
 
   constructor(private stores: StoresService,   
     private route: ActivatedRoute) {
-    let email: string = this.route.snapshot.paramMap.get('email') ||'null';
+    let storeArray: Store[];
+    const email: string = this.route.snapshot.paramMap.get('email') ||'null';
     stores.getStoreByEmail(email).subscribe((data) => {
-      this.store = data;
+      console.log("data "+data);
+      this.store = data[0];
     })
   }
 

@@ -1,1 +1,13 @@
-<p>store-display works!</p>
+<p class="nameStore">{{store?.name}}</p>
+<div *ngIf="store" class="myStoreDescription">
+    <p> המיקום שלי: {{store?.city}}</p>
+    <ul>
+    <li *ngIf="store?.vegan_friendly"> Vegen Friendly! </li>
+    <li *ngIf="store?.kosher"> כשר! </li>
+    <li *ngIf="store?.eco_friendly"> Eco friendly! </li>
+    <li *ngIf="store?.social_business"> עסק חברתי!</li>
+    <li *ngIf="store?.made_in_israel"> Made in Israel! </li>
+</ul>
+    <p>{{store?.description}}</p>
+</div>
+<img class="shopImg" [src]="store?.image_url" />

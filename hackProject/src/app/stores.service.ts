@@ -49,15 +49,15 @@ export class StoresService {
     );
   }
 
-  getStoreByEmail(inEmail: string): Observable<Store> {
-    return this.http.get<Store>(this.url + '/store_by_email',  
+  getStoreByEmail(inEmail: string): Observable<Store[]> {
+    return this.http.get<Store[]>(this.url + '/store_by_email',  
         {params: {email: inEmail}}
     );
   }
 
   postAddStore(store: Store) {
     let url = this.url + '/add_store' + '?' + 
-      'store_name=' + store.store_name + '&email=' + store.email + '&city=' + store.city + '&description=' + store.description + 
+      'name=' + store.name + '&email=' + store.email + '&city=' + store.city + '&description=' + store.description + 
       '&category=' + store.category + '&image_url=' + store.image_url +'&vegan_friendly=' + 
       store.vegan_friendly + '&second_hand=' + store.second_hand + '&kosher=' + store.kosher + 
       '&eco_friendly=' + store.eco_friendly + '&social_business=' + store.social_business +

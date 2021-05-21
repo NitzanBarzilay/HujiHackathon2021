@@ -6,7 +6,7 @@
 
 #titleDiv {
     background-color: #d5e2e7;
-    height: 20%;
+    height: 17%;
 }
 
 p {
@@ -18,7 +18,8 @@ p {
 }
 
 .logo {
-    height: 100px;
+    height: 90px;
+    margin-left: 5%;
 }
 
 .search_button {
