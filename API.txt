@@ -1,0 +1,32 @@
+----------User-----------
+name
+email
+type = a/b/c   # admin / business / customer
+category = fashion / food / office / cosmetics / books / gardening / electronics / pharma / sports
+vegan_friendly = y/n
+second_hand = y/n
+kosher = y/n
+eco_friendly = y/n
+social_business = y/n
+made_in_israel = y/n
+
+----------Store-----------
+store_name
+email
+description
+city = from drop down list
+category = fashion / food / office / cosmetics / books / gardening / electronics / pharma / sports
+
+vegan_friendly = y/n
+second_hand = y/n
+kosher = y/n
+eco_friendly = y/n
+social_business = y/n
+made_in_israel = y/n
+
+----------Product-----------
+name
+description
+price
+email
+recommended = y/n

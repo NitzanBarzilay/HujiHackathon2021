@@ -35,7 +35,28 @@ export class StoresService {
       'Sports'
     ];
   }
+
+  getHebCatagories() : string[]{
+    return [
+      'אופנה',
+      'אוכל',
+      'ציוד משרדי',
+      'קוסמטיקה',
+      'ספרים ואומנות',
+      'גינון',
+      'אלקטרוניקה',
+      'בריאות',
+      'ספורט'
+    ];
+  }
+
+  turnHebCategoryToEng(category: string) {
+    var ind = this.getHebCatagories().indexOf(category);
+    return this.getCatagories()[ind]
+  }
+
   getStoresByCatagory(category: string) : Store[]{
+    category = this.turnHebCategoryToEng(category);
     switch(category) {
       case 'Fashion': {
         return [

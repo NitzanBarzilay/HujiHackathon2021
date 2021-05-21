@@ -1,3 +1,21 @@
+.upCategoriesGrid {
+    margin: 2%;
+}
+
 .categoriesGrid {
-    background-color: darkgrey;
+    background-image: url("../../assets/img/shop1.png");
+    color: black;
+    font-size: 12pt;
+    font-weight: bold;
+    text-decoration: none;
+    height: 161px;
+    width: 287px;
+    display: inline-block;
+    margin: 1%;
+    line-height: 200px;
+    font-family: "Heb";
+}
+
+.categoriesGrid:hover {
+    color: #29296d;
 }
