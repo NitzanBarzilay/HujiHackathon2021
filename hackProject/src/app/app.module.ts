@@ -17,6 +17,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeComponent} from './home/home.component';
 import {CommonModule} from '@angular/common';
 import {CategoryComponent} from './category/category.component';
+import { StoreDisplayComponent } from './store-display/store-display.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {CategoryComponent} from './category/category.component';
     RegistrationComponent,
     HomeComponent,
     CategoryComponent,
+    StoreDisplayComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -47,16 +49,17 @@ export class AppModule {}
 
 declare global{
   export interface Store {
-    name: string;
-    ownerEmail: string;
+    store_name: string;
+    email: string;
     description: string;
     city: string;
     category: string;
-    veganFriendly: boolean;
-    secondHand: boolean;
+    image_url: string;
+    vegan_friendly: boolean;
+    second_hand: boolean;
     kosher: boolean;
-    ecoFriendly: boolean;
-    socialBusiness: boolean;
-    madeInIsrael: boolean;
+    eco_friendly: boolean;
+    social_business: boolean;
+    made_in_israel: boolean;
   }
 }

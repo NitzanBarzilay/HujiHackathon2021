@@ -8,12 +8,15 @@ import { StoresService } from '../stores.service';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
-  storeList: Store[];
+  storeList: Store[] = [];
 
   constructor(private stores: StoresService,   
     private route: ActivatedRoute) {
-    let category: string = this.route.snapshot.paramMap.get('category') || "all";
-    this.storeList = stores.getStoresByCatagory(category); 
+    let category: string = this.route.snapshot.paramMap.get('category') || 'all';
+    let engCategory = stores.turnHebCategoryToEng(category);
+    stores.getStoresByCategory(engCategory).subscribe((data: Store[]) => {
+      this.storeList = data;
+    });
   }
 
   ngOnInit(): void {
