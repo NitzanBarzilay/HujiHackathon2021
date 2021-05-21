@@ -1,6 +1,15 @@
-<a routerLink="/register" routerLinkActive="active">
-    <button mat-raised-button color="primary">
-      Register a business
-    </button>
-</a>
+
+<div id="titleDiv">
+    <p id="helloUser"> בוקר טוב הגר! </p>
+    <img src="./assets/img/logo.png" alt="ERROR" class="logo" />
+    <button class="search_button"> <img src="./assets/img/search.png" class="search" /> </button>
+</div>
+<div id="uppper_menu">
+    <a  routerLink="/register" routerLinkActive="active">
+        <button class="register_button">
+            אני עסק חדש
+        </button>
+    </a>
+</div>
+
 <router-outlet></router-outlet>

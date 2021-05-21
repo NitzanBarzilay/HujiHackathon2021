@@ -1,34 +1,36 @@
-<h3>Please supply some information about your store:</h3>
+
+<h3>עם מי יש לי העונג?</h3>
 <form [formGroup]="registrationForm">
     <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
+        <mat-label class="label">שם העסק</mat-label>
         <input matInput placeholder="Store Name" formControlName="name" required>
     </mat-form-field>
     <br/>
     <mat-form-field appearance="fill">
-        <mat-label>Owner</mat-label>
+        <mat-label class="label">שמך</mat-label>
         <input matInput placeholder="Store Owner" formControlName="ownerName" required>
     </mat-form-field>
     <br/>
     <mat-form-field appearance="fill">
-        <mat-label>Owner Email</mat-label>
+        <mat-label class="label">דואל</mat-label>
         <input matInput placeholder="Owner Email" formControlName="ownerEmail" required>
     </mat-form-field>
     <br/>
     <mat-form-field appearance="fill">
-        <mat-label>City</mat-label>
+        <mat-label class="label">עיר</mat-label>
         <input matInput placeholder="City" formControlName="city" required>
     </mat-form-field>
     <br/>
+    <p>ספר לנו קצת על העסק, מה הופך אותו למיוחד?</p>
     <mat-form-field appearance="fill">
-        <mat-label>Description</mat-label>
+        <mat-label class="label">תיאור</mat-label>
         <input matInput placeholder="description" formControlName="description" required>
     </mat-form-field>
     <br/>
     <mat-form-field appearance="fill">
-        <mat-label>Category</mat-label>
+        <mat-label class="label">קטגוריות</mat-label>
         <mat-select formControlName="category">
-            <mat-option *ngFor="let categorySelect of categories">
+            <mat-option *ngFor="let categorySelect of categories" class="heb">
                 {{categorySelect}}
             </mat-option>
         </mat-select>
@@ -38,25 +40,27 @@
         veganFriendly
     </mat-checkbox>
     &nbsp;    
-    <mat-checkbox formControlName="secondHand">
-        secondHand
+    <mat-checkbox formControlName="secondHand" class="heb">
+        יד שניה
     </mat-checkbox>
     &nbsp;
-    <mat-checkbox formControlName="kosher">
-        kosher
+    <mat-checkbox formControlName="kosher" class="heb">
+        כשר
     </mat-checkbox>
     &nbsp;
-    <mat-checkbox formControlName="ecoFriendly">
-        ecoFriendly
+    <mat-checkbox formControlName="ecoFriendly" class="heb">
+        ידידותי לסביבה
     </mat-checkbox>
     &nbsp;
-    <mat-checkbox formControlName="socialBusiness">
-        socialBusiness
+    <mat-checkbox formControlName="socialBusiness" class="heb">
+        עסק חברתי?
     </mat-checkbox>
     &nbsp;
-    <mat-checkbox formControlName="madeInIsrael">
-        madeInIsrael
+    <mat-checkbox formControlName="madeInIsrael" class="heb">
+        תוצרת ישראל
     </mat-checkbox>
     <br/>
-    <button mat-button [disabled]="registrationForm.invalid" (click)="submitStoreInfo()">Submit</button>
+    <br/>
+    <button mat-button [disabled]="registrationForm.invalid" (click)="submitStoreInfo()" class="heb">שלח</button>
 </form>
+<br/>

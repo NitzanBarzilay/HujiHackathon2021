@@ -1,7 +1,8 @@
-<mat-grid-list cols="3" >
-  <a *ngFor="let category of categories" routerLink="/category/{{category}}">
-  <mat-grid-tile class="categoriesGrid">
+
+<mat-grid-list cols="3" class="upCategoriesGrid" >
+  <a *ngFor="let category of categories" routerLink="/category/{{category}}" class="categoryOne">
+  <div class="categoriesGrid">
       {{category}}
-  </mat-grid-tile>
+  </div>
   </a>
 </mat-grid-list>

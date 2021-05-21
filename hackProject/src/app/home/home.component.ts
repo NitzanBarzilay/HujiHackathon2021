@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   categories: string[];
 
   constructor(private stores: StoresService) {
-    this.categories = stores.getCatagories();
+    this.categories = stores.getHebCatagories();
   }
 
   ngOnInit(): void {

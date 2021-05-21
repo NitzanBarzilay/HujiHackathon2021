@@ -12,7 +12,7 @@ export class RegistrationComponent {
   categories: string[];
 
   constructor(private fb: FormBuilder, private stores: StoresService) {
-    this.categories = stores.getCatagories();
+    this.categories = stores.getHebCatagories();
     this.registrationForm = this.fb.group({
       name: [''],
       ownerName: [''],
@@ -30,13 +30,14 @@ export class RegistrationComponent {
   }
 
   submitStoreInfo() {
+    let engCategory = this.stores.turnHebCategoryToEng(this.registrationForm.value.category);
     let newStore: Store = {
       name: this.registrationForm.value.name,
       ownerName: this.registrationForm.value.ownerName,
       ownerEmail: this.registrationForm.value.ownerEmail,
       city: this.registrationForm.value.city,
       description: this.registrationForm.value.description,
-      category: this.registrationForm.value.category,
+      category: engCategory,
       veganFriendly: this.registrationForm.value.veganFriendly,
       secondHand: this.registrationForm.value.secondHand,
       kosher: this.registrationForm.value.kosher,
