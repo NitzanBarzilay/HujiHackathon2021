@@ -1,11 +1,18 @@
 h3 {
     margin-left: 10%;
+    font-family: "Heb";
 }
 
 .label {
     float: right;
+    font-family: "Heb";
 }
 
 form{
     margin-bottom: 100px;
+    font-family: "Heb";
+}
+
+.heb{
+    font-family: "Heb";
 }

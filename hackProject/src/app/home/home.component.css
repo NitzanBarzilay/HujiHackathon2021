@@ -1,5 +1,5 @@
 .upCategoriesGrid {
-    margin: 5%;
+    margin: 2%;
 }
 
 .categoriesGrid {
@@ -13,8 +13,9 @@
     display: inline-block;
     margin: 1%;
     line-height: 200px;
+    font-family: "Heb";
 }
 
 .categoriesGrid:hover {
-    color: #A00000;
+    color: #29296d;
 }

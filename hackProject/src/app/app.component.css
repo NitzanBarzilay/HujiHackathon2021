@@ -5,7 +5,7 @@
 }
 
 #titleDiv {
-    background-color: #dbdbff;
+    background-color: #ffd6d6;
     height: 20%;
 }
 
@@ -14,6 +14,7 @@ p {
     float: right;
     padding: 2%;
     direction: rtl;
+    font-family: "Heb";
 }
 
 .logo {
@@ -40,5 +41,6 @@ p {
     float: right;
     margin: 1%;
     border-radius: 5%;
+    font-family: "Heb";
 }
 

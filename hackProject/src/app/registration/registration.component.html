@@ -30,7 +30,7 @@
     <mat-form-field appearance="fill">
         <mat-label class="label">קטגוריות</mat-label>
         <mat-select formControlName="category">
-            <mat-option *ngFor="let categorySelect of categories">
+            <mat-option *ngFor="let categorySelect of categories" class="heb">
                 {{categorySelect}}
             </mat-option>
         </mat-select>
@@ -40,27 +40,27 @@
         veganFriendly
     </mat-checkbox>
     &nbsp;    
-    <mat-checkbox formControlName="secondHand">
+    <mat-checkbox formControlName="secondHand" class="heb">
         יד שניה
     </mat-checkbox>
     &nbsp;
-    <mat-checkbox formControlName="kosher">
+    <mat-checkbox formControlName="kosher" class="heb">
         כשר
     </mat-checkbox>
     &nbsp;
-    <mat-checkbox formControlName="ecoFriendly">
+    <mat-checkbox formControlName="ecoFriendly" class="heb">
         ידידותי לסביבה
     </mat-checkbox>
     &nbsp;
-    <mat-checkbox formControlName="socialBusiness">
+    <mat-checkbox formControlName="socialBusiness" class="heb">
         עסק חברתי?
     </mat-checkbox>
     &nbsp;
-    <mat-checkbox formControlName="madeInIsrael">
+    <mat-checkbox formControlName="madeInIsrael" class="heb">
         תוצרת ישראל
     </mat-checkbox>
     <br/>
     <br/>
-    <button mat-button [disabled]="registrationForm.invalid" (click)="submitStoreInfo()">שלח</button>
+    <button mat-button [disabled]="registrationForm.invalid" (click)="submitStoreInfo()" class="heb">שלח</button>
 </form>
 <br/>
