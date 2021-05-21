@@ -1,4 +1,3 @@
-
 <h3>עם מי יש לי העונג?</h3>
 <form [formGroup]="registrationForm">
     <mat-form-field appearance="fill">
@@ -34,6 +33,12 @@
                 {{categorySelect}}
             </mat-option>
         </mat-select>
+    </mat-form-field>
+    <br/>
+    <p>מוזמנים להוסיף לינק לתמונה שמייצגת אתכם או את העסק</p>
+    <mat-form-field appearance="fill">
+        <mat-label class="label">לינק לתמונה</mat-label>
+        <input matInput placeholder="imageUrl" formControlName="imageUrl" required>
     </mat-form-field>
     <br/>
     <mat-checkbox formControlName="veganFriendly">

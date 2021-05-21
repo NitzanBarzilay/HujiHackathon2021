@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {StoresService} from '../stores.service';
+import { StoresService } from '../stores.service';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   categories: string[];
 
   constructor(private stores: StoresService) {
-    this.categories = stores.getHebCatagories();
+    this.categories = stores.getHebCategories();
   }
 
   ngOnInit(): void {

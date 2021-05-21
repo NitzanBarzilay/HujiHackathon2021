@@ -1,38 +1,29 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StoresService {
-  stores: Store[] = [
-    this.createMockStore("name1", "food"),
-    this.createMockStore("name2", "food"),
-    this.createMockStore("name3", "food"), 
-  ];
+  private url = "http://172.29.108.96:8080"
 
-  getStores() : Store[]{
-    return this.stores;
-  }
-
-  addStore(store: Store) {
-    this.stores.push(store);
-  }
-
-  getCatagories() : string[]{
+  getCategories() : string[]{
     return [
-      'Fashion',
-      'Food',
-      'Office supplies',
-      'Cosmetics',
-      'Books and Arts',
-      'Gardening',
-      'Electronics',
-      'Pharma',
-      'Sports'
+      'fashion',
+      'food',
+      'office',
+      'cosmetics',
+      'books',
+      'gardening',
+      'electronics',
+      'pharma',
+      'sports'
     ];
   }
 
-  getHebCatagories() : string[]{
+  getHebCategories() : string[]{
     return [
       'אופנה',
       'אוכל',
@@ -47,54 +38,34 @@ export class StoresService {
   }
 
   turnHebCategoryToEng(category: string) {
-    var ind = this.getHebCatagories().indexOf(category);
-    return this.getCatagories()[ind]
+    var ind = this.getHebCategories().indexOf(category);
+    return this.getCategories()[ind]
   }
 
-  getStoresByCatagory(category: string) : Store[]{
-    category = this.turnHebCategoryToEng(category);
-    switch(category) {
-      case 'Fashion': {
-        return [
-          this.createMockStore("fashion1", "fashion"),
-          this.createMockStore("fashion2", "fashion"),
-          this.createMockStore("fashion3", "fashion"), 
-        ];
-      }
-      case 'Food': {
-        return [
-          this.createMockStore("food1", "food"),
-          this.createMockStore("food2", "food"),
-          this.createMockStore("food3", "food"), 
-        ];
-      }
-      case 'all': {
-        return [
-          this.createMockStore("food1", "food"),
-          this.createMockStore("fashion1", "fashion"),
-          this.createMockStore("food2", "food"), 
-        ];
-      }
-      default: {
-        return [];
-      }
-    }
+  getStoresByCategory(inCategory: string): Observable<Store[]> {
+    let result: Store[] = []; 
+    return this.http.get<Store[]>(this.url + '/stores_by_category',  
+        {params: {category: inCategory}}
+    );
   }
 
-  createMockStore(inName: string, inCatagory: string) : Store {
-    return { name: inName,
-      ownerName: "owner1",
-      ownerEmail: "mail",
-      city: "city",
-      description: "desc",
-      category: inCatagory,
-      veganFriendly: true,
-      secondHand: false,
-      kosher: false,
-      ecoFriendly: true,
-      socialBusiness: false,
-      madeInIsrael: false,
-    }
+  getStoreByEmail(inEmail: string): Observable<Store> {
+    return this.http.get<Store>(this.url + '/store_by_email',  
+        {params: {email: inEmail}}
+    );
   }
-  constructor() { }  
+
+  postAddStore(store: Store) {
+    let url = this.url + '/add_store' + '?' + 
+      'store_name=' + store.store_name + '&email=' + store.email + '&city=' + store.city + '&description=' + store.description + 
+      '&category=' + store.category + '&image_url=' + store.image_url +'&vegan_friendly=' + 
+      store.vegan_friendly + '&second_hand=' + store.second_hand + '&kosher=' + store.kosher + 
+      '&eco_friendly=' + store.eco_friendly + '&social_business=' + store.social_business +
+      '&made_in_israel=' + store.made_in_israel;
+    this.http.post<any>(url, {}).subscribe(() => {
+      console.log("success")
+    });
+  }
+  
+  constructor(private http: HttpClient) { }  
 }
