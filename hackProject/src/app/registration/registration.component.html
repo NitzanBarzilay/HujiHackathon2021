@@ -29,10 +29,16 @@
     <mat-form-field appearance="fill">
         <mat-label class="label">קטגוריות</mat-label>
         <mat-select formControlName="category">
-            <mat-option *ngFor="let categorySelect of categories" class="heb">
+            <mat-option *ngFor="let categorySelect of categories" value="categorySelect" class="heb">
                 {{categorySelect}}
             </mat-option>
         </mat-select>
+    </mat-form-field>
+    <br/>
+    <p>מוזמנים להוסיף לינק לתמונה שמייצגת אתכם או את העסק</p>
+    <mat-form-field appearance="fill">
+        <mat-label class="label">לינק לתמונה</mat-label>
+        <input matInput placeholder="imageUrl" formControlName="imageUrl" required>
     </mat-form-field>
     <br/>
     <mat-checkbox formControlName="veganFriendly">
