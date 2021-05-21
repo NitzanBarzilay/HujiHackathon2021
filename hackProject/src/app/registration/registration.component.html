@@ -30,7 +30,7 @@
     <mat-form-field appearance="fill">
         <mat-label class="label">קטגוריות</mat-label>
         <mat-select formControlName="category">
-            <mat-option *ngFor="let categorySelect of categories" class="heb">
+            <mat-option *ngFor="let categorySelect of categories" value="categorySelect" class="heb">
                 {{categorySelect}}
             </mat-option>
         </mat-select>

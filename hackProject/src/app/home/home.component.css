@@ -3,7 +3,7 @@
 }
 
 .categoriesGrid {
-    background-image: url("../../assets/img/shop1.png");
+    background-image: url("/../../assets/img/shop1.png");
     color: black;
     font-size: 12pt;
     font-weight: bold;
