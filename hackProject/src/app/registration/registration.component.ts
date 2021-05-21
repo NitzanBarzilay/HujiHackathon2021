@@ -32,7 +32,6 @@ export class RegistrationComponent {
   submitStoreInfo() {
     let newStore: Store = {
       name: this.registrationForm.value.name,
-      ownerName: this.registrationForm.value.ownerName,
       ownerEmail: this.registrationForm.value.ownerEmail,
       city: this.registrationForm.value.city,
       description: this.registrationForm.value.description,
@@ -45,5 +44,6 @@ export class RegistrationComponent {
       madeInIsrael: this.registrationForm.value.madeInIsrael,
     };
     this.stores.addStore(newStore);
+    this.stores.postStore(newStore);
   }
 }
