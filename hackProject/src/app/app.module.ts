@@ -8,14 +8,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
+import {HttpClientModule} from '@angular/common/http';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeComponent} from './home/home.component';
-import { CommonModule } from '@angular/common';
-import { CategoryComponent } from './category/category.component';
+import {CommonModule} from '@angular/common';
+import {CategoryComponent} from './category/category.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { CategoryComponent } from './category/category.component';
     MatCheckboxModule,
     MatSelectModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -46,10 +48,9 @@ export class AppModule {}
 declare global{
   export interface Store {
     name: string;
-    ownerName: string;
     ownerEmail: string;
-    city: string;
     description: string;
+    city: string;
     category: string;
     veganFriendly: boolean;
     secondHand: boolean;

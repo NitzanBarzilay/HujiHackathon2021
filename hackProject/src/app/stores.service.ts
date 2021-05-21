@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +12,7 @@ export class StoresService {
     this.createMockStore("name2", "food"),
     this.createMockStore("name3", "food"), 
   ];
+  private url = "http://172.29.108.96:8080"
 
   getStores() : Store[]{
     return this.stores;
@@ -83,7 +87,6 @@ export class StoresService {
 
   createMockStore(inName: string, inCatagory: string) : Store {
     return { name: inName,
-      ownerName: "owner1",
       ownerEmail: "mail",
       city: "city",
       description: "desc",
@@ -96,5 +99,31 @@ export class StoresService {
       madeInIsrael: false,
     }
   }
-  constructor() { }  
+
+  getStoresByCatagory2(inCategory: string): Observable<Store[]> {
+    return this.http.get<Store[]>(this.url + '/stores_by_category',  
+        {params: {category: inCategory}}
+    ).pipe(
+      catchError(this.handleError<Store[]>('getHeroes', []))
+    );
+  }
+
+  postStore(store: Store) {
+    this.http.post(this.url + '/add_store', store).pipe(
+      catchError(this.handleError<Store[]>('getHeroes', []))
+    ).subscribe(() => {
+      console.log("success")
+    });
+  }
+  
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      console.log(`${operation} failed: ${error.message}`);
+  
+      // Let the app keep running by returning an empty result.
+      return of(result as T);
+    };
+  }
+  constructor(private http: HttpClient) { }  
 }
