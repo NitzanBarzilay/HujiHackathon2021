@@ -13,13 +13,12 @@ def create_table(name, values, csv):
 
 
 def main():
-    create_table("products", "name text, description text, price float, email text, recommended text", "products.csv")
-    create_table("stores", "store_name text, email text, description text, city text, category text, vegan_friendly \
+    create_table("products", "name text, price float, description text, recommended text, email text, image_url text", "products.csv")
+    create_table("stores", "store_name text, email text, description text, city text, category text, image_url text, vegan_friendly \
                   text, second_hand text, kosher text, eco_friendly text, social_business text, made_in_israel text",
                  "stores.csv")
-    create_table("users", "name text ,email text, type text, vegan_friendly text \
+    create_table("users", "name text ,email text, type text, vegan_friendly text, \
              second_hand text, kosher text, eco_friendly text, social_business text, made_in_israel text",  "users.csv")
-
-
+    
 if __name__ == "__main__":
     main()

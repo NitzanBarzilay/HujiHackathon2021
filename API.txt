@@ -1,14 +1,15 @@
+############################ Database Tables and properties ######################
+
 ----------User-----------
 name
 email
-type = a/b/c   # admin / business / customer
-category = fashion / food / office / cosmetics / books / gardening / electronics / pharma / sports
-vegan_friendly = y/n
-second_hand = y/n
-kosher = y/n
-eco_friendly = y/n
-social_business = y/n
-made_in_israel = y/n
+type = a/b/c   # admin / business / customer (default = b)
+vegan_friendly = y/n (default = n)
+second_hand = y/n (default = n)
+kosher = y/n (default = n)
+eco_friendly = y/n (default = n)
+social_business = y/n (default = n)
+made_in_israel = y/n (default = n)
 
 ----------Store-----------
 store_name
@@ -16,17 +17,54 @@ email
 description
 city = from drop down list
 category = fashion / food / office / cosmetics / books / gardening / electronics / pharma / sports
+image_url
 
-vegan_friendly = y/n
-second_hand = y/n
-kosher = y/n
-eco_friendly = y/n
-social_business = y/n
-made_in_israel = y/n
+vegan_friendly = y/n (default = n)
+second_hand = y/n (default = n)
+kosher = y/n (default = n)
+eco_friendly = y/n (default = n)
+social_business = y/n (default = n)
+made_in_israel = y/n (default = n)
 
 ----------Product-----------
 name
 description
 price
 email
-recommended = y/n
+recommended = y/n (default = n)
+
+
+############################ Server Queries #########################
+
+----------Post-----------
+
+Address: /add_store
+Parameters (mandatory): name, email, store_name, description, city, category, image_url
+Parameters (optional, default = n): vegan_friendly, second_hand, kosher, eco_friendly, social_business, made_in_israel
+
+Address: /add_product
+Parameters (mandatory): name, email, description, price   # name = product name
+Parameters (optional, default = n): recommended
+
+Address: /delete_product
+Parameters (mandatory): name, email   # name = product name
+
+Address: /add_user
+Parameters (mandatory): name, email, type="b", vegan_friendly="n", second_hand="n", kosher="n", eco_friendly="n",
+             social_business="n", made_in_israel="n"
+Parameters (optional, default = n)
+
+----------Get-----------
+
+Address: /stores_by_category
+Parameters (mandatory): category
+
+Address: /stores_by_city
+Parameters (mandatory): city
+
+Address: /stores_by_user_principles
+Parameters (mandatory): email
+
+Address: /products_in_store
+Parameters (mandatory): email
+
