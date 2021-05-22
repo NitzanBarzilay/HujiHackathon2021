@@ -1,0 +1,36 @@
+.store{
+    background-color: #d5e2e7;
+    border-color: #29296d;
+    border-radius: 5%;
+    border-width: medium;
+    color: #29296d;
+    display: inline-block;
+    margin: 1%;
+    height: 300px;
+    width: 300px;
+    font-family: "Heb";
+}
+
+.store:hover {
+    color: #131352;
+}
+
+.nameStore {
+    margin-top: 15%;
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.cityStore {
+    margin: 5%;
+    font-size: 12pt;
+}
+
+p{
+    margin: 5%;
+    font-size: 12pt;
+}
+
+.getInStore {
+    margin: 15%;
+}

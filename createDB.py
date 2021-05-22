@@ -19,7 +19,6 @@ def main():
                  "stores.csv")
     create_table("users", "name text ,email text, type text, vegan_friendly text, \
              second_hand text, kosher text, eco_friendly text, social_business text, made_in_israel text",  "users.csv")
-
-
+    
 if __name__ == "__main__":
     main()

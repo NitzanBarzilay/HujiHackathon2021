@@ -1,0 +1,45 @@
+:host {
+    text-align: center;
+    align-items: center;  
+    overflow-wrap:break-word;
+}
+
+#titleDiv {
+    background-color: #d5e2e7;
+    height: 20%;
+}
+
+p {
+    color: #3F3F88;
+    float: right;
+    padding: 2%;
+    direction: rtl;
+    font-family: "Heb";
+}
+
+.logo {
+    height: 100px;
+}
+
+.search_button {
+    height: 50px;
+    border-radius: 50%;
+    width: 50px;
+    margin: 2%;
+    float: left;
+}
+
+.search {
+    height: 20px;
+}
+
+#uppper_menu {
+    height: 50px;
+}
+
+.register_button {
+    float: right;
+    margin: 1%;
+    font-family: "Heb";
+}
+

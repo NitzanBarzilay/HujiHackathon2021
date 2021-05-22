@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "Heb";
+    src: local("Heb"), url("./assets/fonts/Assistant-Regular.ttf") format("TrueType");
+  }
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: "Heb", Roboto, "Helvetica Neue", sans-serif;
+    direction: rtl;
+}
+
+button {
+    border: none;
+    background-color: #3F3F88;
+    color: white;
+    padding: 15px;
+    font-family: "Heb";
+    border-radius: 5%;
+}
+
+button:hover{
+    background-color: #29296d;
+}
+

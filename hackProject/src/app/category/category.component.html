@@ -1,0 +1,12 @@
+<mat-grid-list cols="3" class="upCategoriesGrid" >
+<div *ngFor="let store of storeList" class="store">
+    <div>
+        <div class="nameStore">{{store.name}}</div>
+        <div class="cityStore">{{store.city}}</div>
+        <p>{{store.description}}</p>
+        <button class="getInStore">ברוכים הבאים!</button>
+    </div>
+</div>
+</mat-grid-list>
+
+  
