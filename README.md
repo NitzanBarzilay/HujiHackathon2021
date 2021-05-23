@@ -3,4 +3,8 @@ During 2020, almost 85K small and medium businesses in Israel closed due to fina
 
 This web app was developed in 24 hours during the HUJI Hackathon 2021, and won 4th place in the competition (out of 43 groups).
 
-![image](https://user-images.githubusercontent.com/36603609/119272323-0686e580-bc0e-11eb-9764-99adb6179b05.png)
+![image](https://user-images.githubusercontent.com/36603609/119272400-4f3e9e80-bc0e-11eb-9a91-2336dfb40938.png)
+
+![image](https://user-images.githubusercontent.com/36603609/119272385-4352dc80-bc0e-11eb-81a3-0080749745d3.png)
+
+![image](https://user-images.githubusercontent.com/36603609/119272411-6087ab00-bc0e-11eb-8bbd-982940b36bb2.png)
